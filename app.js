@@ -9,7 +9,7 @@ const parent = React.createElement("div", { id: "parent" }, [
 
   React.createElement("div", { id: "child2" }, [
     React.createElement("h1", {}, "An Tag"),
-    React.createElement("h2", {}, "Parcel you are slow"),
+    React.createElement("h2", {}, "Pkokjgjjgyytyutuuuujgw"),
   ]),
 ]);
 
