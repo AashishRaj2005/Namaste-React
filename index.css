@@ -1,13 +1,59 @@
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0.5em;
+  border: 1px solid black;
+  align-items: center;
+}
 body {
-  background-color: bisque;
+  margin: 0.7em;
+}
+.logo {
+  width: 100px;
+  cursor: pointer;
 }
 
-#root {
+.nav-items > ul {
+  font-size: 24px;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+.nav-items > ul > li {
+  cursor: pointer;
+  padding: 0.5em;
+  margin: 0.5x;
+}
+
+.nav-items > ul {
+  font-size: 24px;
+  display: flex;
+  list-style-type: none;
+}
+
+.Card {
+  border: 2px solid black;
+  padding: 0.2em;
+  margin: 0.5em;
+  width: 15em;
+  min-height: 20em;
   text-align: center;
-  color: chocolate;
+}
+.res-container {
+  display: flex;
+  justify-content: space-around;
+   flex-wrap: wrap;
+}
+.Food_img {
+  width: 100%;
+}
+.search {
+  font-size: 17px;
+}
+.searchBar {
   display: flex;
   justify-content: center;
-  align-items: center;
-
-  height: 100vh;
+  margin: 1em;
 }
