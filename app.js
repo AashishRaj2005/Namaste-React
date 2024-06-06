@@ -37,10 +37,43 @@ const Header = () => (
   </div>
 );
 
+const RestaurantCard = () => {
+  return (
+    <div className="Card">
+      <img
+        className="Food_img"
+        src="https://www.cookwithmanali.com/wp-content/uploads/2021/07/Tandoori-Roti-480x270.jpg"
+        alt="Roti"
+      />
+      <h3>Apna Joint</h3>
+      <h4>Tandoor &nbsp; &nbsp; Roti &nbsp;&nbsp; Chawal</h4>
+      <h4>4.5</h4>
+    </div>
+  );
+};
+
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="searchBar">
+        <input type="text" placeholder="Search..." className="search"></input>
+      </div>
+
+      <div className="res-container">
+        <RestaurantCard /> <RestaurantCard /> <RestaurantCard />{" "}
+        <RestaurantCard /> <RestaurantCard /> <RestaurantCard />{" "}
+        <RestaurantCard /> <RestaurantCard /> <RestaurantCard />{" "}
+        <RestaurantCard /> <RestaurantCard />
+      </div>
+    </div>
+  );
+};
+
 const Applayout = () => {
   return (
     <div className="App">
       <Header />
+      <Body />
     </div>
   );
 };
