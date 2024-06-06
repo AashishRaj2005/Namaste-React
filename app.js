@@ -20,10 +20,13 @@ footer
 
 const Header = () => (
   <div className="header">
-    <div className="logo">
-      <img src="https://img.freepik.com/premium-vector/good-food-logo-template_79169-17.jpg?w=740" />
+    <div className="logo_container">
+      <img
+        className="logo"
+        src="https://img.freepik.com/premium-vector/good-food-logo-template_79169-17.jpg?w=740"
+      />
     </div>
-    <div className="navItems">
+    <div className="nav-items">
       <ul>
         <li>Home</li>
         <li>About</li>

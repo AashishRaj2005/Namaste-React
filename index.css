@@ -1,13 +1,29 @@
-body {
-  background-color: bisque;
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+  border: 1px solid black;
+  align-items: center;
 }
 
-#root {
-  text-align: center;
-  color: chocolate;
+.logo {
+  width: 100px;
+  cursor: pointer;
+}
+.nav-items > ul {
+  font-size: 24px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  height: 100vh;
+  list-style-type: none;
+  justify-content: space-between;
+}
+.nav-items > ul > li {
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+}
+.nav-items > ul {
+  font-size: 24px;
+  display: flex;
+  list-style-type: none;
 }
