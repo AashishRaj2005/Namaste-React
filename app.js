@@ -1698,7 +1698,7 @@ const resList=  [
                       "type": "WEBLINK"
                     }
                   }
-                ],
+                ];
 
 const Header = () => (
   <div className="header">
@@ -1719,16 +1719,24 @@ const Header = () => (
   </div>
 );
 
-const RestaurantCard = () => {
+const RestaurantCard = (props) => {
+  const {resData}=props;
+
+  const { name, cloudinaryImageId , costForTwo, avgRating, cuisines} = resData?.info;
+
+
   return (
     <div className="Card">
       <img
         className="Food_img"
-        src="https://www.cookwithmanali.com/wp-content/uploads/2021/07/Tandoori-Roti-480x270.jpg"
-        alt="Roti"
+        src={
+          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
+          cloudinaryImageId
+        }
+        alt={name}
       />
-      <h3>Apna Joint</h3>
-      <h4>Tandoor &nbsp; &nbsp; Roti &nbsp;&nbsp; Chawal</h4>
+      <h3>{name}</h3>
+      <h4>{cuisines.join(",")}</h4>
       <h4>4.5</h4>
     </div>
   );
@@ -1742,8 +1750,7 @@ const Body = () => {
       </div>
 
       <div className="res-container">
-        <RestaurantCard /> <RestaurantCard /> <RestaurantCard />{" "}
-        <RestaurantCard />
+        {resList.map((restaurant)=>(<RestaurantCard key={restaurant.info.id} resData={restaurant} />))}
       </div>
     </div>
   );
