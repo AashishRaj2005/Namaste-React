@@ -1238,71 +1238,7 @@ const resList = [
       type: "WEBLINK",
     },
   },
-  {
-    info: {
-      id: "424197",
-      name: "Juicy Lucy Burgers",
-      cloudinaryImageId: "o6dxv5aqg0yndsncubwl",
-      locality: "Kirti Nagar",
-      areaName: "Kirti Nagar",
-      costForTwo: "₹400 for two",
-      cuisines: [
-        "American",
-        "Fast Food",
-        "Continental",
-        "Italian",
-        "Pizzas",
-        "Desserts",
-      ],
-      avgRating: 4.3,
-      parentId: "289269",
-      avgRatingString: "4.3",
-      totalRatingsString: "5K+",
-      sla: {
-        deliveryTime: 53,
-        lastMileTravel: 11,
-        serviceability: "SERVICEABLE",
-        slaString: "50-55 mins",
-        lastMileTravelString: "11.0 km",
-        iconType: "ICON_TYPE_EMPTY",
-      },
-      availability: {
-        nextCloseTime: "2024-06-09 05:00:00",
-        opened: true,
-      },
-      badges: {},
-      isOpen: true,
-      type: "F",
-      badgesV2: {
-        entityBadges: {
-          imageBased: {},
-          textBased: {},
-          textExtendedBadges: {},
-        },
-      },
-      aggregatedDiscountInfoV3: {
-        header: "₹150 OFF",
-        subHeader: "ABOVE ₹249",
-        discountTag: "FLAT DEAL",
-      },
-      differentiatedUi: {
-        displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        differentiatedUiMediaDetails: {
-          mediaType: "ADS_MEDIA_ENUM_IMAGE",
-          lottie: {},
-          video: {},
-        },
-      },
-      reviewsSummary: {},
-      displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-      restaurantOfferPresentationInfo: {},
-    },
-    analytics: {},
-    cta: {
-      link: "https://www.swiggy.com/restaurants/juicy-lucy-burgers-kirti-nagar-delhi-424197",
-      type: "WEBLINK",
-    },
-  },
+
 ];
 
 const Header = () => (
