@@ -1,9 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { Img } from "react-image";
-
-// jsx code is also there
-
 const resList = [
   {
     info: {
@@ -1238,86 +1232,7 @@ const resList = [
       type: "WEBLINK",
     },
   },
-
 ];
 
-const Header = () => (
-  <div className="header">
-    <div className="logo_container">
-      <img
-        className="logo"
-        src="https://img.freepik.com/premium-vector/good-food-logo-template_79169-17.jpg?w=740"
-      />
-    </div>
-    <div className="nav-items">
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
-        <li>Cart</li>
-      </ul>
-    </div>
-  </div>
-);
 
-const RestaurantCard = (props) => {
-  const { resData } = props;
-
-  const { name, cloudinaryImageId, costForTwo, avgRating, cuisines } =
-    resData?.info;
-
-  return (
-    <div className="Card">
-     
-
-
-      <div className="CardImage">
-
-      <img
-        className="Food_img"
-        src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          cloudinaryImageId
-        }
-        alt={name}
-      />
-      </div>
-      <div className="CardText">
-
-      <h3>{name}</h3>
-      <h4>{cuisines.join(",")}</h4>
-      <h4>{costForTwo}</h4>
-      <h4>{avgRating} stars</h4>
-      </div>
-      
-    </div>
-  );
-};
-
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="searchBar">
-        <input type="text" placeholder=" Search..." className="search"></input>
-      </div>
-
-      <div className="res-container">
-        {resList.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
-        ))}
-      </div>
-    </div>
-  );
-};
-
-const Applayout = () => {
-  return (
-    <div className="App">
-      <Header />
-      <Body />
-    </div>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Applayout />);
+export default resList;
