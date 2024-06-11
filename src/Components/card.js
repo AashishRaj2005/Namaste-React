@@ -1,4 +1,5 @@
 import { IMG_LINK } from "../Utils/constants";
+import resList from "../Utils/mockdata";
 const RestaurantCard = (props) => {
   const { resData } = props;
 
@@ -10,10 +11,7 @@ const RestaurantCard = (props) => {
       <div className="CardImage">
         <img
           className="Food_img"
-          src={ IMG_LINK
-             +
-            cloudinaryImageId
-          }
+          src={IMG_LINK + cloudinaryImageId}
           alt={name}
         />
       </div>
