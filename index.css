@@ -73,6 +73,16 @@ body {
 }
 .searchBar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin: 1em;
+}
+.filter-btn {
+  font-size: 17px;
+  border: 0.1em;
+  border-radius: 2em;
+  cursor: pointer;
+  background-color: brown;
+}
+.filter-btn :hover {
+  background-color: red;
 }
