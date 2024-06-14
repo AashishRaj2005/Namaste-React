@@ -3,26 +3,28 @@ import resList from "../Utils/mockdata";
 import RestaurantCard from "./Card";
 
 const Body = () => {
-const [ListofRest, setListofRes] = useState(resList);
+  const [ListofRest, setListofRes] = useState(resList);
 
-useEffect(() => {
-  fetchData(); // Corrected: Call fetchData() with parentheses
-}, []);
+  useEffect(() => {
+    fetchData(); // Corrected: Call fetchData() with parentheses
+  }, []);
 
-const fetchData = async () => {
-  try {
-    const response = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.65200&lng=77.16630&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
-    const json = await response.json();
-    console.log(json); // Log the received JSON data to see its structure
+  const fetchData = async () => {
+    try {
+      const response = await fetch(
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.65200&lng=77.16630&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      );
+      const json = await response.json();
+      console.log(json); // Log the received JSON data to see its structure
 
-    // Assuming the data structure is as you expect, set it to the state
-    setListofRes(json?.cards?.1?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-  } catch (error) {
-    console.error('Error fetching data:', error);
-  }
-};
+      // Assuming the data structure is as you expect, set it to the state
+      setListofRes(
+        json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
+      );
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
   return (
     <div className="body">
