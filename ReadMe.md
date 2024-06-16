@@ -15,12 +15,16 @@ Brief description or introduction to what the project does.
 
 Provide step-by-step instructions on how to install and set up the project. Be sure to include any dependencies or prerequisites needed.
 
-```bash
+\```bash
 # Example installation steps
 git clone https://github.com/yourusername/project.git
 cd project
 npm install
-```markdown
+\```
+
+
+# Markdown tips
+
 ### Notes on Markdown:
 - **Headings**: Use `#` for main headings (`# Project Title`) and `##` for subheadings (`## Table of Contents`).
 - **Lists**: Use `-` or `*` for bullet points.
