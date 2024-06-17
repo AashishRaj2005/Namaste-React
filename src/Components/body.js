@@ -28,26 +28,10 @@ const Body = () => {
     }
   };
 
-  if (ListofRest.length === 0) {
-    <div className="res-container">
-      <Shimmer /> <Shimmer /> <Shimmer />
-      <Shimmer />
-      <Shimmer />
-      <Shimmer />
-      <Shimmer />
-      <Shimmer />
-      <Shimmer />
-      <Shimmer />
-      <Shimmer />
-      <Shimmer />
-      <Shimmer />
-      <Shimmer />
-      <Shimmer />
-      <Shimmer />
-      <Shimmer />
-    </div>;
-  } else
-    {return (
+  if (ListofRest.length == 0) {
+    <h1>loading...</h1>;
+  } else {
+    return (
       <div className="body">
         <div className="searchBar">
           <input
@@ -74,7 +58,8 @@ const Body = () => {
           ))}
         </div>
       </div>
-    );}
+    );
+  }
 };
 
 export default Body;
