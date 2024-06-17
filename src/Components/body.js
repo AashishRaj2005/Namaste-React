@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import resList from "../Utils/mockdata";
 import RestaurantCard from "./Card";
+import Shimmer from "./shimmer";
 
 const Body = () => {
   const [ListofRest, setListofRes] = useState(resList);
@@ -19,37 +20,61 @@ const Body = () => {
 
       // Assuming the data structure is as you expect, set it to the state
       setListofRes(
-        json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants
+        json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+          ?.restaurants
       );
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
 
-  return (
-    <div className="body">
-      <div className="searchBar">
-        <input type="text" placeholder=" Search..." className="search"></input>
-        <button
-          className="filter-btn"
-          onClick={() => {
-            const filteredList = ListofRest.filter(
-              (res) => res.info.veg == true
-            );
-            setListofRes(filteredList);
-          }}
-        >
-          Filter Res
-        </button>
-      </div>
+  if (ListofRest.length === 0) {
+    <div className="res-container">
+      <Shimmer /> <Shimmer /> <Shimmer />
+      <Shimmer />
+      <Shimmer />
+      <Shimmer />
+      <Shimmer />
+      <Shimmer />
+      <Shimmer />
+      <Shimmer />
+      <Shimmer />
+      <Shimmer />
+      <Shimmer />
+      <Shimmer />
+      <Shimmer />
+      <Shimmer />
+      <Shimmer />
+    </div>;
+  } else
+    {return (
+      <div className="body">
+        <div className="searchBar">
+          <input
+            type="text"
+            placeholder=" Search..."
+            className="search"
+          ></input>
+          <button
+            className="filter-btn"
+            onClick={() => {
+              const filteredList = ListofRest.filter(
+                (res) => res.info.veg == true
+              );
+              setListofRes(filteredList);
+            }}
+          >
+            Filter Res
+          </button>
+        </div>
 
-      <div className="res-container">
-        {ListofRest.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
-        ))}
+        <div className="res-container">
+          {ListofRest.map((restaurant) => (
+            <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+          ))}
+        </div>
       </div>
-    </div>
-  );
+    );}
 };
 
 export default Body;
