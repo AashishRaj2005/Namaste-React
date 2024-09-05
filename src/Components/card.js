@@ -1,5 +1,5 @@
 import { IMG_LINK } from "../Utils/constants";
-import resList from "../Utils/mockdata";
+// import resList from "../Utils/mockdata";
 const RestaurantCard = (props) => {
   const { resData } = props;
 

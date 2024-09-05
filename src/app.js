@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Body from "./Components/Body";
-import Header from "./Components/Header";
+import Body from "./Components/body";
+import Header from "./Components/header";
 // jsx code is also there
 
 const Applayout = () => {
@@ -14,4 +14,4 @@ const Applayout = () => {
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Applayout />);
+root.render(<Applayout/>);
